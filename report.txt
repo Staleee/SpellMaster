@@ -1,0 +1,25 @@
+for the easy bot 
+    when the bot starts the game : bot returns first element in spells
+    otherwise 
+        bot takes last letter from previous spell
+        bot will look at the spells that start with that letter
+        when bot encounters a spell that starts with that letter and hasnt been casted yet it will return it
+
+for the medium bot
+    when bot starts the game : bot returns first element in spells
+    otherwise 
+        bot takes last letter from previous spell
+        bot will find all the spells that start with this letter and havent been casted and places them in an array
+        bot will go over each spell in said array and will take the last letter 
+        bot will now count how many spells start with said letter and place them in an array
+        bot will now find the minimum meaning the spell that will yield the minimum number of options for the oponent 
+        bot returns the spell found at the location of minimum 
+
+for the hard bot : minimax implementation 
+    when bot starts the game, bot will go over all the spells to find the spell that will end the game (the last letter of the spell will not be a starting letter to any spell)
+    if bot doesnt find said spell bot returns the first spell in the list
+    otherwise 
+        bot runs the minimax algorithm 
+        minimax will determine the best move for the bot 
+        bot can return: the spell that will make bot win or it searches for the best move 
+        the best move is a move that leads to the fewest number of winning moves for the oponent 
